@@ -3,8 +3,8 @@ import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/brands'
 
-import './style.css';
+import './style.css'
 
-import initializeWebsite from "./website";
+import initializeWebsite from "./website"
 
-initializeWebsite();
+initializeWebsite()
