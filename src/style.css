@@ -18,6 +18,23 @@ header h1 {
     margin: 20px;
 }
 
+#home, #menu, #contact {
+    border: 2px solid black;
+    padding-bottom: 40px;
+}
+
+h3 {
+    margin: 20px;
+    padding: 20px
+}
+
+p {
+    margin: 10px auto;
+    padding: 10px;
+    border-bottom: 5px solid #444444;
+    width: 50%;
+}
+
 [data-tab-content] {
     display: none;
 }

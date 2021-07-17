@@ -82,7 +82,6 @@ function addSwitchLogic() {
 }
 
 function initializeWebsite() {
-    console.log("Hello Ohhun")
     addComponents()
     addSwitchLogic()
 }
