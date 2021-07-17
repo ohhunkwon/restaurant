@@ -6,10 +6,10 @@ function createHeader() {
     const header = document.createElement('header')
     const h1 = document.createElement('h1')
     const i = document.createElement('i')
-    i.classList.add('fas', 'fa-pizza-slice')
-    h1.appendChild(i)
+    i.classList.add('fas', 'fa-pizza-slice', 'fa-5x')
     h1.textContent = 'Pizza Restaurant'
 
+    header.appendChild(i)
     header.appendChild(h1)
 
     return header
@@ -61,9 +61,30 @@ function addComponents() {
     content.appendChild(createTabContent())
 }
 
+// Switch Logic for tabs
+function addSwitchLogic() {
+    const tabs = document.querySelectorAll('[data-tab-target]')
+    const tabContents = document.querySelectorAll('[data-tab-content]')
+    
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = document.querySelector(tab.dataset.tabTarget)
+            tabContents.forEach(tabContent => {
+                tabContent.classList.remove('active')
+            })
+            tabs.forEach(tab => {
+                tab.classList.remove('active')
+            })
+            tab.classList.add('active')
+            target.classList.add('active')
+        })
+    })
+}
+
 function initializeWebsite() {
     console.log("Hello Ohhun")
     addComponents()
+    addSwitchLogic()
 }
 
 export default initializeWebsite
